@@ -1,0 +1,18 @@
+language: node_js
+
+branches:
+  only:
+    - master
+    # Build git tags
+    - "/v\\d\\.\\d\\.\\d(-\\w+)?/"
+
+# Tests
+script:
+  - echo "👌"
+
+deploy:
+  - provider: script
+    skip_cleanup: true
+    script: test.sh
+    on:
+      tags: true

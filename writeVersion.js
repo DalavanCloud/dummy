@@ -6,8 +6,9 @@ const {execSync} = require('child_process')
 const beautify = require('js-beautify')['js_beautify']
 
 // Extract version from TRAVIS_TAG
+let version
 try {
-  const [, version] = process.env.TRAVIS_TAG.match(/v(.+)/)
+  [, version] = process.env.TRAVIS_TAG.match(/v(.+)/)
 } catch (err) {
   console.log(`Can not extract version from TRAVIS_TAG (${process.env.TRAVIS_TAG})`)
   fail(err)

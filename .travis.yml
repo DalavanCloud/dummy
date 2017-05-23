@@ -10,7 +10,7 @@ script:
 deploy:
 - provider: script
   skip_cleanup: true
-  script: test.sh
+  script: release.sh
   on:
     tags: true
 env:

@@ -24,17 +24,6 @@ const newPackageContentStr = beautify(JSON.stringify(packageContent), {'indent_s
 fs.writeFileSync(packagePath, `${newPackageContentStr}\n`)
 console.log('OK')
 
-console.log('Writing to package.json...')
-// Setup git and push updated package.json
-const githubToken = process.env.GITHUB_TOKEN
-execSync('git config --global user.email "koss+jake-the-bot@nocorp.me"')
-execSync('git config --global user.name "Jake the Bot"')
-execSync('git add package.json')
-execSync(`git commit --message "Prepare for v${verson}"`)
-execSync(`git remote add origin-pages https://${githubToken}@github.com/date-fns/dummy.git > /dev/null 2>&1`)
-execSync('git push --quiet --set-upstream master master')
-console.log('OK')
-
 function fail () {
   console.error(err)
   process.exit(1)

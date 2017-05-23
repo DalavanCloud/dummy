@@ -1,20 +1,18 @@
 language: node_js
 node_js:
-  - 6
-
+- 6
 branches:
   only:
-    - master
-    # Build git tags
-    - "/v\\d\\.\\d\\.\\d(-\\w+)?/"
-
-# Tests
+  - master
+  - "/v\\d\\.\\d\\.\\d(-\\w+)?/"
 script:
-  - echo "👌"
-
+- "echo \"\U0001F44C\""
 deploy:
-  - provider: script
-    skip_cleanup: true
-    script: test.sh
-    on:
-      tags: true
+- provider: script
+  skip_cleanup: true
+  script: test.sh
+  on:
+    tags: true
+env:
+  global:
+    secure: pXrxVfkHW0T+LmUqWMdITmhWJMC04nCv+UMZtWoW7ICZbNZnr2OnF0pNTpkb33FXCpibeBzHSznjsFLzLTRp+pGc4lTthzR2dLiKmmfluU7p3jDvv/djBMceC1jJP3QA5SpE/0NePmLyWXQtpwIzfga8cgBdOJTFjiTKeYV5NsAU6mS2VakOz6EYPeKb+CEbvQ7gWUHYjHKsesvqg9sKnHnvn67N49tuZePd1spII4Pl1jGMhdLoqSs2kyPDfG0DcVGN0Un93pNfnjlL05yn8Xw4GWKgtoIkbhg3g4T9FGp49xsDq4qC0tl2A03/j9uq2iXI6sIsAk+O8wkLK4PRjglJVScf8lV2XFigcF1UjJFp97fdTktsKpL0OGAvM72XDY5JkoC/BbZiJ7kx2y+BFRAGdz1W3u4mYiiQDGrIbg7DUZwdz6pE3lAhEpmAfojLYlh1fFlgnK5oiuSvGNIPE+9QhwWhcDWt4To+VW7j7wnvSipt2fbljeAriZVhMtm8fcEZEHZbbNF+LGhr1q40mlTwb3AbKvuJW6lpDGWvFq7c/gh0ulErEPmvcbGww2ubTBa/mP45grMALaOpQgcZ6vMdBURwQoa/S8aDGBV4Y2bmem+QiJwkkcw+7z3xJdgxNpElkb3lB9Nf/eEU8DJzJ08YjB0g+6JAbaNMTGZtg5I=

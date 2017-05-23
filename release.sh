@@ -2,15 +2,15 @@
 
 set -e
 
+if [ "$TRAVIS_TAG" == "" ]
+then
+  echo "TRAVIS_TAG is not defined, skipping..."
+  exit 0
+fi
+
 if [ "$GITHUB_JAKE_TOKEN" == "" ]
 then
   echo "GITHUB_JAKE_TOKEN is missing"
-  exit 1
-fi
-
-if [ "$TRAVIS_TAG" == "" ]
-then
-  echo "TRAVIS_TAG is not defined"
   exit 1
 fi
 

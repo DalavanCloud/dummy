@@ -14,6 +14,7 @@ then
   exit 1
 fi
 
+echo "Writing version to package.json"
 ./writeVersion.js
 
 echo "Setting up git & pushing package.json"

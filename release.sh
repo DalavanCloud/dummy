@@ -14,10 +14,10 @@ then
   exit 1
 fi
 
-echo "Writing version to package.json"
+echo "Writing version to package.json..."
 ./writeVersion.js
 
-echo "Setting up git & pushing package.json"
+echo "Setting up git & pushing package.json..."
 git config --global user.email "koss+jake-the-bot@nocorp.me"
 git config --global user.name "Jake the Bot"
 git add package.json

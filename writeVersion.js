@@ -25,7 +25,7 @@ const newPackageContentStr = beautify(JSON.stringify(packageContent), {'indent_s
 fs.writeFileSync(packagePath, `${newPackageContentStr}\n`)
 console.log('OK')
 
-function fail () {
+function fail (err) {
   console.error(err)
   process.exit(1)
 }

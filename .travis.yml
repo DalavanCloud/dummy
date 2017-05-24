@@ -5,10 +5,9 @@ branches:
   only:
   - master
   - "/v\\d+\\.\\d+\\.\\d+(-\\w+)?/"
+script: "./test.sh"
 jobs:
   include:
-  - stage: test
-    script: "./test.sh"
   - stage: release
     script: skip
     deploy:

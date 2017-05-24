@@ -21,6 +21,6 @@ echo "Setting up git & pushing package.json..."
 git config --global user.email "koss+jake-the-bot@nocorp.me"
 git config --global user.name "Jake the Bot"
 git add package.json
-git commit --message "Prepare release"
+git commit --message "Prepare release [skip ci]"
 git remote add upstream "https://$GITHUB_JAKE_TOKEN@github.com/date-fns/dummy.git" #> /dev/null 2>&1`
 git push upstream HEAD:master

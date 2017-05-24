@@ -6,16 +6,12 @@ branches:
   - master
   - "/v\\d+\\.\\d+\\.\\d+(-\\w+)?/"
 script: "./test.sh"
-jobs:
-  include:
-  - stage: release
-    script: skip
-    deploy:
-      provider: npm
-      email: kossnocorp@gmail.com
-      api_key:
-        secure: N5Q3FGcCzBa/S250IscloRbwdtbiZhO6bg6BwyL8AuoyFIKOh6PLvFs+lDKlUhlTMFAiSRM0bdRl8r7qwzVRaBT/OKKdlVKS3zdGlr/RsJBUYyoG2fdM5Zjw2r7rJJboSszYwfptA1EX4xKaHCvmjIXIODwG5PuGY1cjmF6d5tGlGm2uU6uB4Gg7xXMWGpDeTE8KZhLaeCw12CmYv9sA8gzfqqtrpNLEwmpPho3sYptloqz3Xv2z1Qwa9HtWxbjV4DXChKjPz45bMFvRzVI3CZV5vxscTrRHceAwjVkV+LYM4maHfn08bh3G+sdBFXylMtX3RkRlRqu6Er596zEgTdAQuxcvkyrfFi7+5uJNRF49tvbplyx0NpsoRPXgc1ZZNo3D08QklOI/ztHpi2DiQXGvc17v2YL/jZlPwsvtXRZtpGqKDp/Yu32PnloboIbWRJ61s0jLcUxMRKhSyXti86FWsKSjN8KdQpZ5TvWeFSdfDvX8T4twWAc1bbtmBIczpU6YKvveAQW///X/kXE/8FwDy8QrC29Fndd3eNGp+uuW+VtJeJsxgIGGN7fij7kHL3p/zoncKRUsO6cKth9qJpvmg0u+VY4mYNLDu3VGIBFVJdnf4g/NWBT3xrvG5CDRg+Hm1kIRSxCiE+Ql5ffEv3BRLbJRvd0siJfld+jgNec=
-      on:
-        tags: true
 before_deploy:
 - "./writeVersion.js"
+deploy:
+  provider: npm
+  email: kossnocorp@gmail.com
+  api_key:
+    secure: ayn0BpFMAuDPXx87a16HZ2OADgKf1R8TLrZ/Qs94K7DkPWxSoIyoMWap8nxaiFV7OC3RvKesoWH9lvubrt5mwi7YGqE+Af/9D97nCRZk+L5B8MClp8lySf7Ndu4G8hNTiuPs6Erm12knUNBpDNxKhkMbONYbrpRfMtgbFbpmDsilLadztEWYQlysbBkbXCT/d24ie5CRzY93YTAoslrAiaJ2Kdt0ziK2JXXaJJ4PY8APoAXo2FBqp2pqivdlFw4KwcRMo70EtfhQMmN4Q7n8J1quFYIydycWUevODwBNLUSLBor0DpHBf1NWzoX2J+rC+B+lbRtI84py98OZ7Aro2/rlFO9SUYlwBziYJdfEp3FmOj4ixIrCw6k/xlqMEK+yst7Lqck5fN/KoF+aEkkey3/icixCqmK/PdB/H8TBJJoh5jObBbbxq8RHaRWbO0ayRJ7R4HqGrKEzKKhGrQd/mpQPdv2KbmHbGH6M5/XX3lJeHH19Zd1nFpfUHFHep+5LUbb4148pSwd/qChhYg5BGmOL4xsa0NgV8SvO83y64Wn4ijl3Mp1ovNdT4NbxZAG2YHLwJhq2N3dMLHqzU05FoWim8Ey1+WK6JnlojWTlGjvgE+GC+Hsa8pDEnbTmX6HyGhUpIKhPGjgNvvqKPMaLH3KIiHgDF37eaecsDOye5AE=
+  on:
+    tags: true

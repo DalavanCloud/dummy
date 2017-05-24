@@ -1,15 +1,22 @@
 language: node_js
 node_js:
 - 6
-
 branches:
   only:
   - master
   - "/v\\d+\\.\\d+\\.\\d+(-\\w+)?/"
-
 jobs:
   include:
   - stage: test
-    script: ./test.sh
+    script: "./test.sh"
   - stage: release
-    script: ./release.sh
+    script: skip
+    deploy:
+      provider: npm
+      email: koss+jake-the-bot@nocorp.me
+      api_key:
+        secure: lBR0uTrS0Sdo4N9BKseVvmMGcISbDFDbqa1xdvsPRp2uy7JjadoptQcxKdjm2WcVr8kefsb/LyjQDGkCB3+YSNH8uhLh6XMcAh0FCODJmxyCE2XVsYK+qYRXwU6ssXTZeYOcsdp73hhq/lufoKNuqmQkFVBD1gts6z5aoEJ+0SPirMcKfS+mKNashQeRy0slXbOWRnD7jCfTqrLhO51wI5/e1qDnwFwR68WYQsAUHzMTYwDBiKaeQKL1XCayNm0KvtOqH2JHsmEDXDDP6GG/qmcG+87IVwUmZr7Wl4vFc4D+Il3YfZkNjuYMbW53StjeFE7SQKcIEpfBq7E6tYemkIdrskyAnENkxRzh5FUer071a29et7EkEiR9hut6YLemdyAmJx2If4PKKHYsLSEbIlzmREVI9eB0xmQVICEyj70dAINQeITdRZhWk+E90U0+PuYlpmbREKl0+4RomrI1/Tzg2UkvSpr+9vmB7NOjig319VLaOtZjbizGZNawlXE60LYDuQPwS1BrYEAu06eeKP/ezP+Jye4LEciIM3puMZmNpCxgqsCVQ6V0ZfCef2ShXI285oLpnT5Uw78NMfqyB50hfQMDuBedrQcYTswJhHQ835TANtr/8m2r3hYE01Blz1g67vhlUhbX3eqp64nTvFx8aMAFq1srx5P/hH4W+Dc=
+    on:
+      tags: true
+before_deploy:
+- "./writeVersion.js"

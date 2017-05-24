@@ -1,5 +1,6 @@
 {
-  "version": "0.20.0",
+  "name": "date-fns-dummy",
+  "version": "The version is automatically generated during the release",
   "dependencies": {
     "js-beautify": "^1.6.14"
   }

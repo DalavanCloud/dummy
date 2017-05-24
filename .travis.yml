@@ -12,9 +12,9 @@ jobs:
     script: skip
     deploy:
       provider: npm
-      email: koss+jake-the-bot@nocorp.me
+      email: kossnocorp@gmail.com
       api_key:
-        secure: lBR0uTrS0Sdo4N9BKseVvmMGcISbDFDbqa1xdvsPRp2uy7JjadoptQcxKdjm2WcVr8kefsb/LyjQDGkCB3+YSNH8uhLh6XMcAh0FCODJmxyCE2XVsYK+qYRXwU6ssXTZeYOcsdp73hhq/lufoKNuqmQkFVBD1gts6z5aoEJ+0SPirMcKfS+mKNashQeRy0slXbOWRnD7jCfTqrLhO51wI5/e1qDnwFwR68WYQsAUHzMTYwDBiKaeQKL1XCayNm0KvtOqH2JHsmEDXDDP6GG/qmcG+87IVwUmZr7Wl4vFc4D+Il3YfZkNjuYMbW53StjeFE7SQKcIEpfBq7E6tYemkIdrskyAnENkxRzh5FUer071a29et7EkEiR9hut6YLemdyAmJx2If4PKKHYsLSEbIlzmREVI9eB0xmQVICEyj70dAINQeITdRZhWk+E90U0+PuYlpmbREKl0+4RomrI1/Tzg2UkvSpr+9vmB7NOjig319VLaOtZjbizGZNawlXE60LYDuQPwS1BrYEAu06eeKP/ezP+Jye4LEciIM3puMZmNpCxgqsCVQ6V0ZfCef2ShXI285oLpnT5Uw78NMfqyB50hfQMDuBedrQcYTswJhHQ835TANtr/8m2r3hYE01Blz1g67vhlUhbX3eqp64nTvFx8aMAFq1srx5P/hH4W+Dc=
+        secure: N5Q3FGcCzBa/S250IscloRbwdtbiZhO6bg6BwyL8AuoyFIKOh6PLvFs+lDKlUhlTMFAiSRM0bdRl8r7qwzVRaBT/OKKdlVKS3zdGlr/RsJBUYyoG2fdM5Zjw2r7rJJboSszYwfptA1EX4xKaHCvmjIXIODwG5PuGY1cjmF6d5tGlGm2uU6uB4Gg7xXMWGpDeTE8KZhLaeCw12CmYv9sA8gzfqqtrpNLEwmpPho3sYptloqz3Xv2z1Qwa9HtWxbjV4DXChKjPz45bMFvRzVI3CZV5vxscTrRHceAwjVkV+LYM4maHfn08bh3G+sdBFXylMtX3RkRlRqu6Er596zEgTdAQuxcvkyrfFi7+5uJNRF49tvbplyx0NpsoRPXgc1ZZNo3D08QklOI/ztHpi2DiQXGvc17v2YL/jZlPwsvtXRZtpGqKDp/Yu32PnloboIbWRJ61s0jLcUxMRKhSyXti86FWsKSjN8KdQpZ5TvWeFSdfDvX8T4twWAc1bbtmBIczpU6YKvveAQW///X/kXE/8FwDy8QrC29Fndd3eNGp+uuW+VtJeJsxgIGGN7fij7kHL3p/zoncKRUsO6cKth9qJpvmg0u+VY4mYNLDu3VGIBFVJdnf4g/NWBT3xrvG5CDRg+Hm1kIRSxCiE+Ql5ffEv3BRLbJRvd0siJfld+jgNec=
       on:
         tags: true
 before_deploy:

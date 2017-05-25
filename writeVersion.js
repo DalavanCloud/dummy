@@ -17,11 +17,10 @@ try {
 
 console.log(`Version: ${version}`)
 
-console.log('Writing to package.json')
+console.log('Writing to package.json...')
 // Write package.json with the version equal to the version encoded in the tag name
 const packagePath = path.join(process.cwd(), 'package.json')
 const packageContent = JSON.parse(fs.readFileSync(packagePath).toString())
 Object.assign(packageContent, {version})
 const newPackageContentStr = beautify(JSON.stringify(packageContent), {'indent_size': 2})
 fs.writeFileSync(packagePath, `${newPackageContentStr}\n`)
-console.log('OK')

@@ -10,8 +10,9 @@ let version
 try {
   [, version] = process.env.TRAVIS_TAG.match(/v(.+)/)
 } catch (err) {
-  console.log(`Can not extract version from TRAVIS_TAG (${process.env.TRAVIS_TAG})`)
-  fail(err)
+  console.error(`Can not extract version from TRAVIS_TAG (${process.env.TRAVIS_TAG})`)
+  console.error(err)
+  process.exit(1)
 }
 
 console.log(`Version: ${version}`)
@@ -24,8 +25,3 @@ Object.assign(packageContent, {version})
 const newPackageContentStr = beautify(JSON.stringify(packageContent), {'indent_size': 2})
 fs.writeFileSync(packagePath, `${newPackageContentStr}\n`)
 console.log('OK')
-
-function fail (err) {
-  console.error(err)
-  process.exit(1)
-}

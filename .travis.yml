@@ -8,6 +8,7 @@ branches:
 script: "./test.sh"
 before_deploy:
 - "./writeVersion.js"
+- "./prepareRelease.js"
 deploy:
   provider: npm
   email: kossnocorp@gmail.com
@@ -15,3 +16,4 @@ deploy:
     secure: ayn0BpFMAuDPXx87a16HZ2OADgKf1R8TLrZ/Qs94K7DkPWxSoIyoMWap8nxaiFV7OC3RvKesoWH9lvubrt5mwi7YGqE+Af/9D97nCRZk+L5B8MClp8lySf7Ndu4G8hNTiuPs6Erm12knUNBpDNxKhkMbONYbrpRfMtgbFbpmDsilLadztEWYQlysbBkbXCT/d24ie5CRzY93YTAoslrAiaJ2Kdt0ziK2JXXaJJ4PY8APoAXo2FBqp2pqivdlFw4KwcRMo70EtfhQMmN4Q7n8J1quFYIydycWUevODwBNLUSLBor0DpHBf1NWzoX2J+rC+B+lbRtI84py98OZ7Aro2/rlFO9SUYlwBziYJdfEp3FmOj4ixIrCw6k/xlqMEK+yst7Lqck5fN/KoF+aEkkey3/icixCqmK/PdB/H8TBJJoh5jObBbbxq8RHaRWbO0ayRJ7R4HqGrKEzKKhGrQd/mpQPdv2KbmHbGH6M5/XX3lJeHH19Zd1nFpfUHFHep+5LUbb4148pSwd/qChhYg5BGmOL4xsa0NgV8SvO83y64Wn4ijl3Mp1ovNdT4NbxZAG2YHLwJhq2N3dMLHqzU05FoWim8Ey1+WK6JnlojWTlGjvgE+GC+Hsa8pDEnbTmX6HyGhUpIKhPGjgNvvqKPMaLH3KIiHgDF37eaecsDOye5AE=
   on:
     tags: true
+  local_dir: test

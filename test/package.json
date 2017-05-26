@@ -1,0 +1,7 @@
+{
+  "name": "date-fns-dummy",
+  "version": "5.0.0",
+  "dependencies": {
+    "js-beautify": "^1.6.14"
+  }
+}

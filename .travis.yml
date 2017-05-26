@@ -8,7 +8,6 @@ branches:
 script: "./test.sh"
 before_deploy:
 - "./writeVersion.js"
-- "./prepareRelease.js"
 deploy:
   provider: npm
   email: kossnocorp@gmail.com
